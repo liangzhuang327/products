@@ -3,6 +3,7 @@ autogenerate
 bin
 logs
 node_modules
+dist
 static/scripts/index.min.js*
 static/scripts/billing.min.js*
 static/scripts/*.bundle.js*

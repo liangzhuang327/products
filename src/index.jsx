@@ -1,9 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Home from './scr/components/home'
+import Home from './components/home'
 
-ReactDOM.render(
-    <div>
-        sdddddddd
-    </div>
-    ,document.getElementById("root"))
+ReactDOM.render(<div><Home /></div>,document.getElementById("root"))

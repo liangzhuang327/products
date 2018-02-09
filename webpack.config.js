@@ -5,9 +5,12 @@ const webpack = require('webpack');
 module.exports = {
     entry: './src/index.jsx',
     output: {
-        filename: '[name].bundle.js',
+        filename: 'main.bundle.js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: "/assets/"
+    },
+    resolve: {
+        extensions: [".js", ".jsx"],
     },
     module: {
         rules: [
@@ -15,7 +18,7 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 loader: 'babel-loader',
                 //打包除这个文件之外的文件
-                exclude: path.resolve(__dirname,"./node_modules"),
+                exclude: path.resolve(__dirname, "./node_modules"),
                 //打包包括的文件
                 include: path.resolve(__dirname, "./src"),
                 query: {
@@ -59,7 +62,7 @@ module.exports = {
         open: true,//当open启用时，开发服务器将打开浏览器
         //openPage: '/different/page',指定打开浏览器时导航到的页面
         port: 8080,//指定要监听请求的端口号
-        publicPath: "/assets/",//此路径下的打包文件可在浏览器中访问。服务器假设运行在http://localhost:8080并且output.filename被设置为bundle.js默认。publicPath是"/"，所以你的包（束）通过可以http://localhost:8080/bundle.js访问
+        // publicPath: "/assets/",//此路径下的打包文件可在浏览器中访问。服务器假设运行在http://localhost:8080并且output.filename被设置为bundle.js默认。publicPath是"/"，所以你的包（束）通过可以http://localhost:8080/bundle.js访问
         inline: true,//在DEV-服务器的两种不同模式之间切换。默认情况下，程序应用启用内联模式（串联模式）。这意味着一段处理实时重载的脚本被插入到你的包（束）中，并且构建消息将会出现在浏览器控制台。
     }
 }
