@@ -4,7 +4,8 @@
   "description": "{less-loader和style-loader是为页面导入less里的样式；file-loader加载样式里的图片；url-loader将文件加载为base64编码的URL}  {: '为页面导入less里的样式（style-loader是必须）:': 'html-webpack-plugin该插件会自动生成一个html文件，类似总入口文件，其中script中包含了所有打包好了的入口中的文件',: '如果你使用了 webpack-dev-middleware 而没有使用 webpack-dev-server，请使用 webpack-hot-middleware package 包，以在你的自定义服务或应用程序上启用 HMR。',}",
   "main": "index.js",
   "scripts": {
-    "webpack-start": "webpack-dev-server --open"
+    "webpack-start": "webpack-dev-server --open",
+    "koa:server": "babel-node bin/www"
   },
   "repository": {
     "type": "git",
@@ -19,11 +20,20 @@
   "dependencies": {
     "antd": "^3.2.0",
     "async": "^2.6.0",
+    "debug": "^2.6.3",
     "es6-promise": "^4.2.4",
     "immutable": "^3.8.2",
-    "koa": "^2.4.1",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^2.0.1",
+    "koa-onerror": "^1.2.1",
+    "koa-router": "^7.1.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.2.1",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react-dom": "^15.6.2",
     "react-redux": "^5.0.2",
     "react-router": "^3.0.2",
     "react-router-redux": "^4.0.7",
