@@ -1,0 +1,4 @@
+# creatHistory
+react-router-redux的syncHistoryWithStore和react-router的creatMemoryHistory两种创建history的不同？
+# 同构中的redux的store
+服务端的store构建与客户端store构建中传入的state不同出现warning？
